@@ -38,7 +38,7 @@ Ask a question. SPECTRA's agent searches **Google News, Trends, Web, Scholar, Jo
 
 **SerpApi engines used:** `google`, `google_news`, `google_trends`, `google_scholar`, `google_jobs`, `google_shopping`, `google_patents`, `youtube`. The agent picks only the engines the question needs, not all of them every time.
 
-## Where AI (OpenAI) is used, and where it is *not*
+## Where AI (OpenAI) is used
 
 The LLM is **optional** and uses any OpenAI-compatible API (`LLM_API_KEY`, `LLM_MODEL`; default `gpt-4o-mini`). Code: `backend/llm/` (`client.py`, `service.py`).
 
@@ -47,7 +47,6 @@ It is used **only for wording**:
 2. Labelling each result with a one-line claim and direction (`extract_claims`)
 3. Rewriting blind-spot explanations in plain language (`explain_blind_spot`)
 
-It is **never** used for scores. Signals, divergences, blind spots and the final answer are **deterministic code** (`backend/analysis/`) working on SerpApi evidence. With no LLM key everything still works: SPECTRA falls back to rule-based claims and directions.
 
 ---
 
@@ -98,9 +97,7 @@ npm run dev                          # open http://localhost:3000
 
 Open `http://localhost:8000/api/llm/check` to test your LLM setup, and `http://localhost:8000/docs` for the API.
 
-**Try it without any keys:** click **▶ Watch a sample investigation** on the home page. It runs the real pipeline over canned data (clearly labelled as sample data).
 
-**Saving credits:** a Quick run uses roughly 3–5 searches, Standard 7–12, Deep 10–20. Identical searches are cached for 15 minutes, and saved investigations replay for free.
 
 ## Run the tests
 
@@ -118,17 +115,4 @@ python -m pytest tests -q      # 28 offline tests, no API keys needed
 
 Good first questions: *"Is humanoid robotics actually commercially mature?"*, *"If I buy silver today, will the price go up by next month?"*, *"Is EV adoption in India accelerating faster than infrastructure?"*
 
-## Limitations (honest)
 
-- SPECTRA describes public information; it does **not** predict prices or outcomes, and strength scores are **not probabilities**.
-- A quiet surface may mean private or poorly indexed activity, not that nothing exists.
-- Regional comparison covers the regions searched (e.g. Global vs India), not every country.
-- Google Maps is not included yet.
-
-## AI tools disclosure
-
-This project was built with AI assistance (ChatGPT and Claude were used for planning, code generation and review). The application itself can optionally call an OpenAI-compatible LLM as described above. All code was reviewed and tested by the author.
-
-## License
-
-MIT, see `LICENSE`. More detail in `docs/` (architecture, methodology, SerpApi usage, API, demo script).
