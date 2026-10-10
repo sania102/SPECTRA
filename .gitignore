@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.next/
+out/
+node_modules/
+.DS_Store
+*.log
+
+# Saved investigation runs (copy ones you want to keep as demos)
+backend/data/runs/*.json
+!backend/data/runs/.gitkeep
+.env.local
