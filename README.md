@@ -20,7 +20,7 @@ Ask a question. SPECTRA's agent searches **Google News, Trends, Web, Scholar, Jo
 | **Audit** | Exactly which SerpApi searches ran, what came back and what was filtered out. |
 | **History** | Past investigations are saved: replay them for free, or delete them. |
 
-**Modes:** *Quick* (3 surfaces, 3-month trend) · *Standard* (5 surfaces, 12-month trend, Global-vs-region check) · *Deep* (8 surfaces, 20 results each, 5-year trend, Scholar cross-check).
+
 
 ---
 
