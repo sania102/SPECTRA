@@ -1,4 +1,5 @@
 # SPECTRA: Information Blind-Spot Intelligence
+**DEMO  : https://drive.google.com/file/d/1hjoiCVWl-e5avcEi23SKGfel1c55loAd/view?usp=sharing**
 
 > **Search wider. See what you're missing.**
 > Built for the **SerpApi India Hackathon 2026** · Track 01 – AI Agents
